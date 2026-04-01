@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Sinnet - Break Through Tennis Barriers | Factory-Direct Gear + AI Coaching App</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            color: #111827;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        /* Neon green primary color #C0FF40 / dark tech grey */
+        :root {
+            --neon: #C0FF40;
+            --neon-dark: #A0E030;
+            --dark-bg: #0A0C10;
+            --dark-card: #14181F;
+            --gray-light: #F9FAFB;
+            --gray-border: #E5E7EB;
+            --text-dark: #1F2937;
+            --text-muted: #6B7280;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Button Styles */
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--neon);
+            color: #111;
+            font-weight: 700;
+            padding: 12px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .btn-primary:hover {
+            background-color: var(--neon-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(192,255,64,0.3);
+        }
+        .btn-outline {
+            display: inline-block;
+            background: transparent;
+            border: 2px solid var(--neon);
+            color: #111;
+            font-weight: 700;
+            padding: 10px 26px;
+            border-radius: 40px;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .btn-outline:hover {
+            background: var(--neon);
+            border-color: var(--neon);
+        }
+        .btn-dark {
+            background-color: #1F2937;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+            display: inline-block;
+        }
+        .btn-dark:hover {
+            background-color: #111827;
+        }
+
+        /* Header Navigation */
+        header {
+            background: #FFFFFF;
+            border-bottom: 1px solid var(--gray-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(8px);
+            background-color: rgba(255,255,255,0.96);
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        .logo span {
+            color: var(--neon);
+            background: #1F2937;
+            padding: 2px 8px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            margin-left: 6px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #1F2937;
+            transition: 0.2s;
+        }
+        .nav-links a:hover {
+            color: var(--neon-dark);
+        }
+        .nav-download {
+            background: white;
+            color: #111;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-weight: 600;
+            border: 2px solid #111;
+        }
+        .nav-download:hover {
+            background: var(--neon);
+            border-color: var(--neon);
+            color: #111;
+        }
+        .lang-switch {
+            border: 1px solid var(--gray-border);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        .lang-switch:hover {
+            background: var(--neon);
+            border-color: var(--neon);
+            color: #111;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0 80px;
+            background: linear-gradient(135deg, #F9FAFB 0%, #FFFFFF 100%);
+        }
+        .hero-grid {
+            display: flex;
+            align-items: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+        .hero-content {
+            flex: 1;
+        }
+        .hero-badge {
+            background: var(--neon);
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+        }
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            max-width: 500px;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .hero-image {
+            flex: 1;
+            background: #EFF3F6;
+            border-radius: 36px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+        }
+        .hero-image i {
+            font-size: 8rem;
+            color: var(--neon-dark);
+        }
+        .mock-app {
+            font-weight: 600;
+            margin-top: 16px;
+            color: #4b5563;
+        }
+
+        /* Pain Points Comparison */
+        .pain-points {
+            padding: 80px 0;
+            background: white;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 48px;
+        }
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+        .card-pain {
+            background: #F3F4F6;
+            border-radius: 32px;
+            padding: 32px;
+            transition: 0.25s;
+        }
+        .card-pain.right {
+            background: #0A0C10;
+            color: white;
+        }
+        .card-pain.right .pain-icon {
+            color: var(--neon);
+        }
+        .pain-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .card-pain h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        .card-pain ul {
+            list-style: none;
+            margin-top: 16px;
+        }
+        .card-pain li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .cross {
+            color: #EF4444;
+        }
+        .check {
+            color: var(--neon);
+        }
+
+        /* APP Preview Section */
+        .app-preview {
+            background: #F9FAFB;
+            padding: 80px 0;
+        }
+        .preview-wrapper {
+            display: flex;
+            gap: 48px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .app-mockup {
+            flex: 1;
+            background: #0A0C10;
+            border-radius: 48px;
+            padding: 30px 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 20px 30px -15px rgba(0,0,0,0.2);
+        }
+        .app-mockup i {
+            font-size: 5rem;
+            color: var(--neon);
+            margin-bottom: 20px;
+        }
+        .app-features {
+            flex: 1;
+        }
+        .feature-list {
+            margin-top: 24px;
+        }
+        .feature-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: flex-start;
+        }
+        .feature-icon {
+            background: var(--neon);
+            width: 44px;
+            height: 44px;
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+        /* Featured Products */
+        .featured-shop {
+            padding: 80px 0;
+        }
+        .product-grid {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .product-card {
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            overflow: hidden;
+            width: 280px;
+            transition: 0.2s;
+            border: 1px solid var(--gray-border);
+        }
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.12);
+        }
+        .product-img {
+            background: #EFF3F6;
+            padding: 32px;
+            text-align: center;
+            font-size: 3.8rem;
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .badge-factory {
+            background: var(--neon);
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .product-price {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin: 12px 0;
+        }
+        .old-price {
+            text-decoration: line-through;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-left: 8px;
+            font-weight: normal;
+        }
+        /* Testimonials */
+        .testimonials {
+            background: #0A0C10;
+            color: white;
+            padding: 80px 0;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+        .testi-card {
+            background: #14181F;
+            padding: 28px;
+            border-radius: 28px;
+        }
+        .testi-text {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color: #E5E7EB;
+        }
+        .testi-user {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .testi-avatar {
+            width: 44px;
+            height: 44px;
+            background: var(--neon);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #111;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: #9CA3AF;
+            padding: 48px 0 24px;
+        }
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-col {
+            flex: 1;
+            min-width: 160px;
+        }
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        .footer-col a {
+            display: block;
+            color: #9CA3AF;
+            text-decoration: none;
+            margin-bottom: 12px;
+        }
+        .qr-code {
+            background: white;
+            width: 90px;
+            height: 90px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: black;
+            margin-bottom: 12px;
+        }
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #2d3748;
+            padding-top: 28px;
+            font-size: 0.8rem;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .nav-links {
+                justify-content: center;
+                gap: 20px;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .compare-grid {
+                grid-template-columns: 1fr;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .hero-grid {
+                flex-direction: column;
+            }
+            .preview-wrapper {
+                flex-direction: column;
+            }
+            .container {
+                padding: 0 20px;
+            }
+        }
+        .highlight {
+            color: var(--neon-dark);
+            font-weight: 700;
+        }
+        button, a {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <h1>Sinnet <span>Reverse Tennis</span></h1>
+            </div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">App Features</a>
+                <a href="#">Shop</a>
+                <a href="#">AI Technology</a>
+                <a href="cn.html" class="lang-switch" title="切换到中文"><i class="fas fa-globe"></i> 中文</a>
+                <a href="#" class="nav-download"><i class="fas fa-download"></i> Download App</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">⚡ Tennis Revolution · Zero Barriers</div>
+                <h1>Break the Two Biggest Barriers:<br> <span class="highlight">Affordable Gear + AI Self-Learning</span></h1>
+                <p>Factory-direct tennis shoes & balls, paired with an AI motion-analysis app — rebuild your game with physics and data. No more expensive coaches or early dropouts.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary"><i class="fas fa-robot"></i> Try AI Coaching Free</a>
+                    <a href="#" class="btn-outline"><i class="fas fa-shopping-cart"></i> Factory-Direct Gear</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <video src="Sinnet.mp4" autoplay loop muted playsinline style="width: 100%; max-width: 400px; border-radius: 20px;"></video>
+                <div class="mock-app">Real-time AI Motion Capture | Shot Recognition</div>
+                <div style="margin-top: 12px; font-size: 0.8rem;">📱 Sinnet App Preview</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Comparison -->
+    <section class="pain-points">
+        <div class="container">
+            <h2 class="section-title">Tennis Should Be Simple & Sustainable</h2>
+            <div class="compare-grid">
+                <div class="card-pain">
+                    <div class="pain-icon">❌</div>
+                    <h3>Traditional Tennis Struggles</h3>
+                    <ul>
+                        <li><span class="cross"><i class="fas fa-times-circle"></i></span> Coaching fees $50–150/hour</li>
+                        <li><span class="cross"><i class="fas fa-times-circle"></i></span> Branded shoes/gear with huge markups</li>
+                        <li><span class="cross"><i class="fas fa-times-circle"></i></span> No guidance → incorrect form → dropout rate >70%</li>
+                        <li><span class="cross"><i class="fas fa-times-circle"></i></span> Frequent consumable costs</li>
+                    </ul>
+                </div>
+                <div class="card-pain right">
+                    <div class="pain-icon">✔️</div>
+                    <h3>Sinnet Solution</h3>
+                    <ul>
+                        <li><span class="check"><i class="fas fa-check-circle"></i></span> AI virtual coach, 24/7 motion analysis & feedback</li>
+                        <li><span class="check"><i class="fas fa-check-circle"></i></span> Factory-direct prices: shoes & balls up to 50% less</li>
+                        <li><span class="check"><i class="fas fa-check-circle"></i></span> Sports science + physics models for fast muscle memory</li>
+                        <li><span class="check"><i class="fas fa-check-circle"></i></span> Shot recognition + auto-scoring, practice like a pro</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APP Preview + AI Core Features -->
+    <section class="app-preview">
+        <div class="container preview-wrapper">
+            <div class="app-mockup">
+                <i class="fas fa-camera"></i>
+                <h3 style="margin: 16px 0;">AI Real-Time Motion Analysis</h3>
+                <p style="color:#ccc;">Upload swing video → skeleton detection → angle/contact point diagnosis → improvement tips</p>
+                <div style="background: #2d3748; border-radius: 24px; padding: 12px; margin-top: 20px;">
+                    <span style="color: var(--neon);">📐 Knee angle: 142° → Suggestion: increase knee bend</span>
+                </div>
+            </div>
+            <div class="app-features">
+                <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">More Than an App, Your Personal Tennis Coach</h2>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                        <div><strong>Science-Based Tutorials</strong><br>Physics & math behind serve angles, footwork dynamics — learn 3x faster</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-eye"></i></div>
+                        <div><strong>Shot Recognition + Smart Scoring</strong><br>Real-time ball tracking, auto scoring, visual heatmaps of your game</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div><strong>Self-Teaching Skills</strong><br>From “dependent on coach” to self-correction — master tennis fundamentals</div>
+                    </div>
+                </div>
+                <a href="#" class="btn-primary" style="margin-top: 16px;"><i class="fab fa-apple"></i> App Store  &nbsp;|&nbsp; <i class="fab fa-android"></i> Google Play</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Factory-Direct Featured Products -->
+    <section class="featured-shop">
+        <div class="container">
+            <h2 class="section-title">⚡ Factory-Direct Prices · Zero Gear Worry</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-shoe-prints"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="badge-factory">🏭 Direct from Factory</div>
+                        <h3>Sinnet Speed Tennis Shoes</h3>
+                        <p>Durable grip / Pro-level cushioning / Breathable mesh</p>
+                        <div class="product-price">$29 <span class="old-price">$79</span></div>
+                        <a href="#" class="btn-primary" style="width:100%; text-align: center; padding: 10px;">Shop Now</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-baseball-ball"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="badge-factory">🎾 Premium Durability</div>
+                        <h3>Training Tennis Balls (3-pack)</h3>
+                        <p>Professional pressure / Wool-nylon blend / Extra durable</p>
+                        <div class="product-price">$4.5 <span class="old-price">$12</span></div>
+                        <a href="#" class="btn-primary" style="width:100%; text-align: center; padding: 10px;">Shop Now</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="badge-factory">📦 Bulk Save 10%</div>
+                        <h3>Tennis Balls 6-can (18 balls)</h3>
+                        <p>Match-grade feel, ideal for long-term training</p>
+                        <div class="product-price">$24 <span class="old-price">$49</span></div>
+                        <a href="#" class="btn-primary" style="width:100%; text-align: center; padding: 10px;">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="btn-outline">View All Gear <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">❤️ Real Stories from Self-Learners</h2>
+            <div class="testimonial-grid">
+                <div class="testi-card">
+                    <div class="testi-text">“I spent a fortune on 10 lessons and still couldn’t serve. Sinnet’s slow-motion analysis and angle suggestions fixed my form in two weeks! Plus gear is so affordable I don’t worry about worn-out balls.”</div>
+                    <div class="testi-user">
+                        <div class="testi-avatar"><i class="fas fa-user"></i></div>
+                        <div><strong>Alex Chen</strong> <span style="font-size:0.8rem; color: #9CA3AF;"> · 3 months into tennis</span></div>
+                    </div>
+                </div>
+                <div class="testi-card">
+                    <div class="testi-text">“The shot recognition feature is a game-changer. Auto-scoring and heatmaps make practice feel professional. The factory-direct shoes are still going strong after 3 months — saved enough to buy a year’s worth of balls.”</div>
+                    <div class="testi-user">
+                        <div class="testi-avatar"><i class="fas fa-user"></i></div>
+                        <div><strong>Maria Lopez</strong> <span style="font-size:0.8rem; color: #9CA3AF;"> · Intermediate player</span></div>
+                    </div>
+                </div>
+                <div class="testi-card">
+                    <div class="testi-text">“As university tennis club president, I recommend Sinnet to all beginners. The AI quantifies abstract techniques, and with such low gear costs, our club retention jumped by 60%.”</div>
+                    <div class="testi-user">
+                        <div class="testi-avatar"><i class="fas fa-users"></i></div>
+                        <div><strong>James Zhao</strong> <span style="font-size:0.8rem; color: #9CA3AF;"> · Club President</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer + App Download QR -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Sinnet</h4>
+                <p>Breaking tennis barriers so everyone can enjoy the game.</p>
+                <div style="margin-top: 16px;">
+                    <i class="fab fa-twitter" style="font-size: 1.5rem; margin-right: 12px;"></i>
+                    <i class="fab fa-instagram" style="font-size: 1.5rem;"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <a href="#">AI Teaching Principles</a>
+                <a href="#">Factory-Direct Shop</a>
+                <a href="#">Self-Learning Courses</a>
+                <a href="#">Shot Recognition Tech</a>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="#">Help Center</a>
+                <a href="#">Return Policy</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Become a Partner</a>
+            </div>
+            <div class="footer-col">
+                <h4>Download App</h4>
+                <div class="qr-code">
+                    <i class="fas fa-qrcode"></i>
+                </div>
+                <div>Scan to download Sinnet</div>
+                <div style="margin-top: 12px;">
+                    <i class="fab fa-apple"></i> iOS  |  <i class="fab fa-android"></i> Android
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 Sinnet. Reverse Tennis Barriers — Factory-Direct Gear · AI Self-Learning System. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

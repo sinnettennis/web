@@ -1,4 +1,52 @@
-Sinnet
-Break the Two Biggest Barriers:
-Affordable Gear + AI Self-Learning
-Factory-direct tennis shoes & balls, paired with an AI motion-analysis app — rebuild your game with physics and data. No more expensive coaches or early dropouts.
+# Sinnet.top — SEO & GEO Optimization Guide
+
+This repository provides a comprehensive optimization roadmap for [sinnet.top](https://sinnet.top), a tennis-tech brand combining an AI coach app with factory-direct gear. The guide focuses on both **traditional SEO** (Google, Bing, Baidu) and **GEO** (Generative Engine Optimization for LLMs like ChatGPT, DeepSeek, Gemini).
+
+---
+
+## 📖 Table of Contents
+
+- [English Version](#english-version)
+  - [Current Status](#current-status)
+  - [SEO Recommendations](#seo-recommendations)
+  - [GEO Recommendations](#geo-recommendations)
+  - [Action Plan & Priorities](#action-plan--priorities)
+  - [Summary](#summary)
+- [中文版本](#中文版本)
+  - [当前现状分析](#当前现状分析)
+  - [SEO 优化建议](#seo-优化建议)
+  - [GEO 优化建议](#geo-优化建议)
+  - [行动计划与优先级](#行动计划与优先级)
+  - [总结](#总结)
+
+---
+
+# English Version
+
+## Current Status
+
+Sinnet.top is currently a **Single Page Application (SPA)**. All content is stacked on a single page, which creates several challenges:
+
+- **Poor crawl efficiency** – Search engine bots rely on distinct URLs and hyperlinks; an SPA limits indexable depth.
+- **Missing critical meta tags** – No unique `<title>` or `<meta name="description">` tags were found, hurting click‑through rates and relevance signals.
+- **Weak GEO foundation** – Generative AI models prefer well‑structured, linkable content. The SPA format makes it harder for LLMs to extract and cite information reliably.
+
+## SEO Recommendations
+
+### 1. Restructure as a Multi‑Page Website
+Create a clear information architecture with separate pages:
+
+| Page | URL example | Purpose |
+|------|-------------|---------|
+| Home | `/` | Brand value, key offerings |
+| AI App | `/ai-app` | Detailed intro to the AI tennis coach |
+| Shop | `/shop` | Products (shoes, balls, etc.) + PDPs |
+| About | `/about` | Team, mission, story |
+
+### 2. Add Unique Meta Tags
+For every page, define a unique `<title>` (50–60 chars) and `<meta name="description">` (150–160 chars) that naturally include primary keywords.
+
+**Example for Homepage:**
+```html
+<title>Sinnet – AI Tennis Coach & Affordable Gear</title>
+<meta name="description" content="Sinnet provides an AI virtual coach app and factory‑direct tennis equipment. Break down high coaching fees and brand markups.">

@@ -1,4 +1,4 @@
-**Sinnet Tennis Learning Golden Rules- 199 USD, reach 3.0 level in 6 months.**
+**Sinnet Tennis Learning Golden Rules- 149 USD, reach 3.0 level in 6 months.**
 
 Tennis is a complex sport of changing rhythm that involves controlling three variables. Variable 1: the person, Variable 2: the racket, Variable 3: the ball. The person drives the racket, the racket strikes the ball, and the ball flies under the influence of gravity and air. One complete tennis stroke includes: 1. Judgment, 2. Moving into position, 3. Swinging, 4. Striking the ball at the correct moment, 5. Returning to the appropriate recovery position.
 
